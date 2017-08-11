@@ -1,4 +1,5 @@
 pipeline {
+agent any
     parameters {
 		booleanParam(
             name: 'test', 
