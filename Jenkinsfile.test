@@ -1,0 +1,8 @@
+pipeline {
+   stages {
+		stage('ImportScanWebUIArachni') {
+            steps {
+				sh "echo 'COUCOU' "
+		}
+	}
+}
