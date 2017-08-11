@@ -11,9 +11,11 @@ pipeline{
 			when {
 				expression {params.test == true }
             }
-			build(
-                 job: 'Jenkinsfile.test',
-            )
+            steps {
+                build(
+					job: 'Jenkinsfile.test',
+				)
+            }
 		}
 	}
 }
