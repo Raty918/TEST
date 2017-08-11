@@ -1,5 +1,5 @@
-pipeline {
-agent any
+pipeline{
+	agent any
     parameters {
 		booleanParam(
             name: 'test', 
@@ -8,12 +8,13 @@ agent any
 		}	
    stages {
 		stage('Test') {
-			if(params.test){
-				build(
-					job: 'Jenkinsfile.test',
-				)
-			}
+			when {
+				expression {params.test == true }
+            }
+            steps {
+                sh 'echo "coucou"'
+            }
 		}
-    }
+	}
 }
 
