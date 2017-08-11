@@ -11,9 +11,9 @@ pipeline{
 			when {
 				expression {params.test == true }
             }
-            steps {
+			build(
                  job: 'Jenkinsfile.test',
-            }
+            )
 		}
 	}
 }
