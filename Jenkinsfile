@@ -12,7 +12,7 @@ pipeline{
 				expression {params.test == true }
             }
             steps {
-                sh 'echo "pwetpwet"'
+                 job: 'Jenkinsfile.test',
             }
 		}
 	}
