@@ -12,7 +12,7 @@ pipeline{
 				expression {params.test == true }
             }
             steps {
-                sh 'echo "coucou"'
+                sh 'echo "pwetpwet"'
             }
 		}
 	}
